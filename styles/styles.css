@@ -1,0 +1,62 @@
+body {
+    padding: 0;
+    text-align: center;
+    }
+  
+.game-intro {
+    float: left;
+    padding: 0% 10%;
+    }
+  
+.game-intro p {
+    font-size: 18px;
+    font-family: "Verdana"
+    }
+  
+div.game-intro {
+    background-image: url("../images/backimg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+  
+  
+.logo-img {
+    top: 50;
+    left: 50;
+    width: 250px;
+    }
+  
+  
+#start-button {
+    
+    color: #0d007200;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-image: url("../images/try.png");
+    background-size:contain;
+    background-position: center;
+  
+    }
+  
+#restart-button {
+    color: #0d007200;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-image: url("../images/replay.png");
+    background-size:cover;
+    background-position: center;
+    }
+  
+#game-board {
+      float: left;
+      padding: 20px 0px;
+    }
+  
+    div.game-intro p {
+    font-size: 25px;
+    font-style: oblique;
+    color:black;
+    }
