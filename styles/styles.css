@@ -43,7 +43,7 @@ div.game-intro {
 #restart-button {
     color: #0d007200;
     padding: 5px 15px;
-    border-radius: 5px;
+    border-radius: 50px;
     margin-bottom: 50px;
     background-image: url("../images/replay.png");
     background-size:cover;
@@ -55,8 +55,16 @@ div.game-intro {
       padding: 20px 0px;
     }
   
-    div.game-intro p {
+div.game-intro p {
     font-size: 25px;
     font-style: oblique;
     color:black;
     }
+
+  #mute-button {
+    padding: 2px 5px;
+    border-radius: 20px;
+    margin-right: 650px;
+    } 
+
+    

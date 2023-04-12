@@ -5,8 +5,12 @@ window.addEventListener('load', () => {
     const startScreen = document.querySelector(".game-intro");
     const restartBtn = document.querySelector('#restart-button');
 // music
-    const audio = new Audio ("/sounds/audio.mp3");
+    const audio = new Audio ("sounds/audio.mp3");
+    const mute = document.querySelector("#mute-button");
     audio.volume = 0.1;
+
+// game start
+    let isGameStarted = false;
     
       
 document.getElementById('start-button').onclick = () => {
@@ -15,18 +19,20 @@ document.getElementById('start-button').onclick = () => {
     
     canvas.style.display = 'none'
     restartBtn.style.display = 'none'
+// how to hide the mute button    
+    //mute.style.display = 'none'
     
 //staduim img
     const staduimImg = new Image ()
-    staduimImg.src = "/images/soccer-stadium.png";
+    staduimImg.src = "images/soccer-stadium.png";
     
 //player img
     const playerImg = new Image ()
-    playerImg.src = "/images/player.png";
+    playerImg.src = "images/player.png";
     
 //panel
     const panelImg = new Image ()
-    panelImg.src = "/images/panel.png";
+    panelImg.src = "images/panel.png";
     
 //player
     const player = {
@@ -41,7 +47,7 @@ document.getElementById('start-button').onclick = () => {
     
 //ball img 
     let ballImg = new Image () 
-    ballImg.src ="/images/soccer.png";
+    ballImg.src ="images/soccer.png";
     
 // ball properties
     let ballX = 100
@@ -154,27 +160,29 @@ cancelAnimationFrame(animateId)
         restartBtn.style.display = 'block';
         }
     else { 
-//if (isMovingLeft || isMovingRight){
         animateId = requestAnimationFrame(animate)
         }
         }
+    
     
 // Window
     function startGame() {
         canvas.style.display = 'block'
         startScreen.style.display = 'none'
-        // check for movement 
-        // maybe have an if condition for ismovingleft and or ismovingright???
 animate()
         audio.play()
         
         }
-    
+    // if (isGameStarted === true ) {
+    //     startGame();
+    //}
+
 // restart button
         restartBtn.addEventListener('click', () => {
 // show canvas and hide start screen
         canvas.style.display = 'block'
         startScreen.style.display = 'none'
+        restartBtn.style.display = 'none'
         
         playerX = canvas.width/2 - player.width;
         playerY = canvas.height - player.height;
@@ -199,17 +207,24 @@ animate()
       
     
 // AddEventListener
+mute.addEventListener("click" , () => {
+    audio.muted = !audio.muted;
+})
 document.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
-        isMovingLeft = true
+        isMovingLeft = true;
+// wait till player moves  
+    isGameStarted = true;
         }
       if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
-        isMovingRight = true
+        isMovingRight = true;
+// wait till player moves        
+    isGameStarted = true;
         }
         })
 document.addEventListener('keyup', event => {
     if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
-        isMovingLeft = false
+        isMovingLeft = false;
         }
     if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
         isMovingRight = false
