@@ -24,7 +24,7 @@ document.getElementById('start-button').onclick = () => {
     
 //staduim img
     const staduimImg = new Image ()
-    staduimImg.src = "/images/soccer-stadium.png";
+    staduimImg.src = "./images/soccer-stadium.png";
     
 //player img
     const playerImg = new Image ()
@@ -32,7 +32,7 @@ document.getElementById('start-button').onclick = () => {
     
 //panel
     const panelImg = new Image ()
-    panelImg.src = "../images/panel.png";
+    panelImg.src = "./images/panel.png";
     
 //player
     const player = {
