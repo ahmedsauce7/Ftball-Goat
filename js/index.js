@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const startScreen = document.querySelector(".game-intro");
     const restartBtn = document.querySelector('#restart-button');
 // music
-    const audio = new Audio ("sounds/audio.mp3");
+    const audio = new Audio ("./sounds/audio.mp3");
     const mute = document.querySelector("#mute-button");
     audio.volume = 0.1;
 
