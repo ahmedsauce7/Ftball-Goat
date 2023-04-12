@@ -4,13 +4,15 @@ window.addEventListener('load', () => {
     const ctx = canvas.getContext("2d");
     const startScreen = document.querySelector(".game-intro");
     const restartBtn = document.querySelector('#restart-button');
+    const goatBtn = document.querySelector('#goat-button')
+    const imageGoat = document.querySelector('.goatImg')
 // music
     const audio = new Audio ("./sounds/audio.mp3");
     const mute = document.querySelector("#mute-button");
-    audio.volume = 0.1;
+    audio.volume = 0.2;
 
-// game start
-    let isGameStarted = false;
+// GOAT Image
+    let showImage = false;
     
       
 document.getElementById('start-button').onclick = () => {
@@ -19,6 +21,7 @@ document.getElementById('start-button').onclick = () => {
     
     canvas.style.display = 'none'
     restartBtn.style.display = 'none'
+    imageGoat.style.display = 'none'
 // how to hide the mute button    
     //mute.style.display = 'none'
     
@@ -33,6 +36,9 @@ document.getElementById('start-button').onclick = () => {
 //panel
     const panelImg = new Image ()
     panelImg.src = "./images/panel.png";
+
+    const goatImg = new Image () 
+    goatImg.src = "./images/cr7.png"
     
 //player
     const player = {
@@ -158,6 +164,10 @@ cancelAnimationFrame(animateId)
         ctx.font = '30px sans'
         ctx.fillText(`Your Total Score: ${score}`, canvas.width / 2 - 100, canvas.height / 2 + 50)
         restartBtn.style.display = 'block';
+//Goat of Football
+        ctx.fillStyle = 'black'
+        ctx.font = '20px Arial'
+        ctx.fillText('Click on the G.O.A.T. of Football', canvas.width / 2 - 118, canvas.height / 2 - 120)
         }
     else { 
         animateId = requestAnimationFrame(animate)
@@ -171,11 +181,11 @@ cancelAnimationFrame(animateId)
         startScreen.style.display = 'none'
 animate()
         audio.play()
-        
         }
-    // if (isGameStarted === true ) {
-    //     startGame();
-    //}
+
+// if (isGameStarted === true ) {
+//     startGame();
+//}
 
 // restart button
         restartBtn.addEventListener('click', () => {
@@ -207,6 +217,16 @@ animate()
       
     
 // AddEventListener
+
+goatBtn.addEventListener("click" , () => {
+    showImage = !showImage
+    if (showImage){
+     imageGoat.style.display = 'block'
+    } else {
+    imageGoat.style.display = 'none'
+    }
+})
+
 mute.addEventListener("click" , () => {
     audio.muted = !audio.muted;
 })
@@ -214,12 +234,12 @@ document.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
         isMovingLeft = true;
 // wait till player moves  
-    isGameStarted = true;
+// isGameStarted = true;
         }
       if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
         isMovingRight = true;
 // wait till player moves        
-    isGameStarted = true;
+// isGameStarted = true;
         }
         })
 document.addEventListener('keyup', event => {

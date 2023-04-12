@@ -8,13 +8,14 @@ Football Goat is a game where the player has to move  horizontally to keep the b
 Use the "Arrows", "A", or "D" to control the player. 
 
 <!-- MVP -->
-The game has a ball that falls using gravity
-A player moving right and left
-slightly increasing ball speed
+The game has a ball that falls using gravity.
+A player moving right and left.
+Slightly increasing ball speed.
 
 <!-- Backlog -->
-scoreboard
-ability to restart the game 
+Scoreboard.
+Ability to restart the game.
+Ability to mute the audio.
 
 <!-- How to play -->
 Use the "Arrows", "A", or "D" to control the player. 
@@ -33,7 +34,8 @@ audio.play()
 
 <!-- Links -->
 
-<!-- Trello -->
+<!-- Deployment -->
+https://ahmedsauce7.github.io/Ftball-Goat/
 
 <!-- Git -->
 https://github.com/ahmedsauce7/Football-Goat.git

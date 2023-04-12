@@ -45,10 +45,12 @@ div.game-intro {
     color: #0d007200;
     padding: 5px 15px;
     border-radius: 50px;
-    margin-bottom: 50px;
     background-image: url("../images/replay.png");
     background-size:cover;
     background-position: center;
+    /* margin-top: 100px;
+    margin-bottom: 100px;
+     */
     }
   
 #game-board {
@@ -63,9 +65,31 @@ div.game-intro p {
     }
 
   #mute-button {
-    padding: 2px 5px;
-    border-radius: 20px;
+    padding: 20px 20px;
+    border-radius: 50px;
     margin-right: 650px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-image: url("../images/mute.png");
+    background-size:cover;
+    background-position:center;
+
     } 
 
-    
+    .goatImg {
+        height: 103vh;
+        width: 83vh;
+       position: absolute;
+        top: 20;
+        left: 20;
+    }
+
+    #goat-button {
+        padding: 30px 30px;
+        border-radius: 50px;
+        margin-right: 650px;
+        background-image:url("../images/goat.png");
+        background-size:cover;
+        background-position:center;
+        margin-top: 50px;
+    }
