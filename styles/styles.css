@@ -14,6 +14,7 @@ body {
     }
   
 div.game-intro {
+    background-color: black;
     background-image: url("../images/backimg.png");
     background-size: cover;
     background-position: center;

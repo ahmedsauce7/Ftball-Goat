@@ -24,15 +24,15 @@ document.getElementById('start-button').onclick = () => {
     
 //staduim img
     const staduimImg = new Image ()
-    staduimImg.src = "images/soccer-stadium.png";
+    staduimImg.src = "/images/soccer-stadium.png";
     
 //player img
     const playerImg = new Image ()
-    playerImg.src = "images/player.png";
+    playerImg.src = "./images/player.png";
     
 //panel
     const panelImg = new Image ()
-    panelImg.src = "images/panel.png";
+    panelImg.src = "../images/panel.png";
     
 //player
     const player = {
@@ -46,8 +46,8 @@ document.getElementById('start-button').onclick = () => {
     let playerY = canvas.height - player.height
     
 //ball img 
-    let ballImg = new Image () 
-    ballImg.src ="images/soccer.png";
+    // let ballImg = new Image () 
+    // ballImg.src ="images/soccer.png";
     
 // ball properties
     let ballX = 100
