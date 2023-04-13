@@ -1,5 +1,6 @@
 Project Title
-
+<br>
+<hr>
 Football Goat Game
 [Click here to play](https://ahmedsauce7.github.io/Ftball-Goat/)
 
