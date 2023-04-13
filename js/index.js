@@ -8,6 +8,7 @@ window.addEventListener('load', () => {
     const imageGoat = document.querySelector('.goatImg')
 // music
     const audio = new Audio ("./sounds/audio.mp3");
+    const sui = new Audio ("./sounds/sui.mp3")
     const mute = document.querySelector("#mute-button");
     audio.volume = 0.2;
 
@@ -222,6 +223,7 @@ goatBtn.addEventListener("click" , () => {
     showImage = !showImage
     if (showImage){
      imageGoat.style.display = 'block'
+     sui.play();
     } else {
     imageGoat.style.display = 'none'
     }
