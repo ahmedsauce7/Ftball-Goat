@@ -223,7 +223,7 @@ goatBtn.addEventListener("click" , () => {
     showImage = !showImage
     if (showImage){
      imageGoat.style.display = 'block'
-     sui.play();
+     sui.play()
     } else {
     imageGoat.style.display = 'none'
     }
