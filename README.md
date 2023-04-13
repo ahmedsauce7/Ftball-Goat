@@ -60,8 +60,5 @@ Replay page
 <br>
 <hr>
 
-Git
-
-https://github.com/ahmedsauce7/Football-Goat.git
-
-<!-- Slides -->
+## Slides 
+[Click here to access the slides](https://docs.google.com/presentation/d/1xhpaBuAsm4rD7YrWx7goUUSTNWvrlZbwqiBblG4lCq0/edit?usp=sharing)
