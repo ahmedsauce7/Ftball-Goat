@@ -1,4 +1,4 @@
-// canvas
+// Canvas
 window.addEventListener('load', () => {
     const canvas = document.querySelector("canvas");
     const ctx = canvas.getContext("2d");
@@ -6,7 +6,8 @@ window.addEventListener('load', () => {
     const restartBtn = document.querySelector('#restart-button');
     const goatBtn = document.querySelector('#goat-button')
     const imageGoat = document.querySelector('.goatImg')
-// music
+
+// Music
     const audio = new Audio ("./sounds/audio.mp3");
     const sui = new Audio ("./sounds/sui.mp3")
     const mute = document.querySelector("#mute-button");
@@ -15,67 +16,62 @@ window.addEventListener('load', () => {
 // GOAT Image
     let showImage = false;
     
-      
+// Start button
 document.getElementById('start-button').onclick = () => {
       startGame()
     };
     
     canvas.style.display = 'none'
     restartBtn.style.display = 'none'
-    imageGoat.style.display = 'none'
-// how to hide the mute button    
+    imageGoat.style.display = 'none'   
     //mute.style.display = 'none'
     
-//staduim img
+// Staduim img
     const staduimImg = new Image ()
     staduimImg.src = "./images/soccer-stadium.png";
     
-//player img
+// Player img
     const playerImg = new Image ()
     playerImg.src = "./images/player.png";
     
-//panel
+// Panel
     const panelImg = new Image ()
     panelImg.src = "./images/panel.png";
 
     const goatImg = new Image () 
     goatImg.src = "./images/cr7.png"
     
-//player
+// Player
     const player = {
       height: 200,
       width: 100,
       speed: 4,
     }
     
-// player properties 
+// Player properties 
     let playerX = canvas.width/2 - player.width
     let playerY = canvas.height - player.height
     
-//ball img 
-    // let ballImg = new Image () 
-    // ballImg.src ="images/soccer.png";
-    
-// ball properties
+// Ball properties
     let ballX = 100
     let ballY = 100
     let ballSpeedX = 1
     let ballSpeedY = 1 
     let ballRadius = 20
    
-// gravity 
-    const gravity = 0.2
+// Gravity 
+    const gravity = 0.3
     
-// left and right properties
+// Left and right properties
     let isMovingLeft = false
     let isMovingRight = false
     
-// game over
+// Game over
     let score = 0
     let gameOver = false
     let animateId
     
-// ball 
+// Ball 
     const drawBall = () => {
         ctx.beginPath()
         ctx.fillStyle = 'tomato'
@@ -83,114 +79,113 @@ document.getElementById('start-button').onclick = () => {
         ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2)
         ctx.fill()
         ctx.closePath()
-      }
+        }
     
     const animate = () => {
         ctx.drawImage(staduimImg, 0, 0, canvas.width, canvas.height);
         ctx.drawImage(playerImg, playerX, playerY, player.width, player.height)
-// ctx.drawImage(ballImg, ballX, ballY, 30, 0, Math.PI * 2)
         drawBall()
       
       
     
-// right wall 
+// Right wall 
     if (ballX > canvas.width - ballRadius)
-      {
+    {
         ballSpeedX *= -1
-      }
+    }
     
-//floor 
+// Floor 
     if (ballY > canvas.height - player.height - ballRadius &&
         ballX > playerX &&
         ballX < playerX + player.width)
-        {
+    {
         ballSpeedY = -10
-        player.width *=1 
+        player.width *= 1 
         score += 1
     
-//left side and right side of the head
+// Left side and right side of the head
     if (ballX < playerX + player.width / 2){
         ballSpeedX = -5
         } 
     else {
         ballSpeedX = 5
         }
-        }
-//left wall 
+    }
+// Left wall 
     if (ballX < ballRadius)
-        {
-        ballSpeedX *=-1
-        }
-// ceilling 
+    {
+        ballSpeedX *= -1
+    }
+// Ceilling 
     if (ballY < ballRadius)
-        {
+    {
         ballSpeedY *= -1
-        }
+    }
     
     if (isMovingLeft && playerX > 0){
         playerX -= player.speed
-        }
+    }
     else if(isMovingRight && playerX < canvas.width - player.width) {
         playerX += player.speed
-        }
+    }
     
-// ball speed
+// Ball speed
         ballX += ballSpeedX
         ballY += ballSpeedY
     
-//gravity 
+// Gravity 
         ballSpeedY += gravity
     
-//gameover
-    if (ballY > canvas.height - ballRadius) {
+// Gameover
+    if (ballY > canvas.height - ballRadius) 
+    {
         gameOver = true 
-        }
+    }
     
         ctx.drawImage(panelImg,0 ,0, 80, 80)
         ctx.font = '35px sans'
-        ctx.fillText(score,32,50)
+        ctx.fillText(score,31,50)
     
     if (gameOver) 
-        {
+    {
 cancelAnimationFrame(animateId)
       
         
-//Gameover text 
+// Gameover text 
         ctx.drawImage(panelImg,canvas.width / 2 - 180, 100, 400, 400 )
         ctx.font = '55px Arial'
         ctx.fillStyle = 'black'
         ctx.fillText('GAME OVER', canvas.width / 2 - 150, canvas.height / 2)
-//Your total score
+// Your total score
         ctx.fillStyle = 'black'
         ctx.font = '30px sans'
         ctx.fillText(`Your Total Score: ${score}`, canvas.width / 2 - 100, canvas.height / 2 + 50)
         restartBtn.style.display = 'block';
-//Goat of Football
+// Goat of Football
         ctx.fillStyle = 'black'
         ctx.font = '20px Arial'
         ctx.fillText('Click on the G.O.A.T. of Football', canvas.width / 2 - 118, canvas.height / 2 - 120)
-        }
-    else { 
+    }
+    else 
+    { 
         animateId = requestAnimationFrame(animate)
-        }
+    }
         }
     
     
 // Window
-    function startGame() {
+    function startGame() 
+        {
         canvas.style.display = 'block'
         startScreen.style.display = 'none'
 animate()
         audio.play()
         }
 
-// if (isGameStarted === true ) {
-//     startGame();
-//}
-
-// restart button
-        restartBtn.addEventListener('click', () => {
-// show canvas and hide start screen
+// Restart button
+        restartBtn.addEventListener('click', () => 
+    {
+// Show canvas and hide start screen
         canvas.style.display = 'block'
         startScreen.style.display = 'none'
         restartBtn.style.display = 'none'
@@ -210,46 +205,48 @@ animate()
         score = 0;
         gameOver = false;
       
-// start the game
+// Start the game
         startGame();
-        });
+    });
     
       
       
     
 // AddEventListener
-
-goatBtn.addEventListener("click" , () => {
-    showImage = !showImage
+        goatBtn.addEventListener("click" , () => 
+    {
+        showImage = !showImage
     if (showImage){
-     imageGoat.style.display = 'block'
-     sui.play()
-    } else {
-    imageGoat.style.display = 'none'
-    }
-})
+        imageGoat.style.display = 'block'
+        sui.play()
+        } 
+    else 
+        {
+        imageGoat.style.display = 'none'
+        }
+    })
 
-mute.addEventListener("click" , () => {
-    audio.muted = !audio.muted;
-})
-document.addEventListener('keydown', event => {
+        mute.addEventListener("click" , () => 
+    {
+        audio.muted = !audio.muted;
+    })
+document.addEventListener('keydown', event => 
+    {
     if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
         isMovingLeft = true;
-// wait till player moves  
-// isGameStarted = true;
+
         }
-      if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
+    if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
         isMovingRight = true;
-// wait till player moves        
-// isGameStarted = true;
         }
-        })
-document.addEventListener('keyup', event => {
+    })
+document.addEventListener('keyup', event => 
+    {
     if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A') {
         isMovingLeft = false;
         }
     if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
         isMovingRight = false
         }
-        })
+    })
         })

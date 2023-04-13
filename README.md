@@ -1,26 +1,31 @@
-<!-- Project Title -->
-Football Goat 
+Project Title
 
-<!-- Project Description -->
-Football Goat is a game where the player has to move  horizontally to keep the ball from touching the ground. The game ends when the ball touches the floor. After that, a score is calculated based on how many keep-ups the player got.
+Football Goat Game
+[Click here to play](https://ahmedsauce7.github.io/Ftball-Goat/)
 
-<!-- How to play -->
+Project Description
+
+Football Goat is a game created using HTML, CSS, AND Javascript. The game contains a player that moves horizontally to keep the ball from touching the ground. The game ends when the ball touches the floor. After that, a score is calculated based on how many keep-ups the player got.
+
+How to play
+
 Use the "Arrows", "A", or "D" to control the player. 
 
-<!-- MVP -->
+MVP
+
 The game has a ball that falls using gravity.
 A player moving right and left.
 Slightly increasing ball speed.
+Score increases everytime the ball is kept of the floor.
 
-<!-- Backlog -->
+Backlog
 Scoreboard.
 Ability to restart the game.
 Ability to mute the audio.
 
-<!-- How to play -->
-Use the "Arrows", "A", or "D" to control the player. 
 
-<!-- Data Structure -->
+Data Structure
+
 startGame()
 new Image ()
 beginPath()
@@ -30,14 +35,16 @@ ctx.fill
 ctx.drawImage()
 ctx.fillText()
 animate()
-audio.play()
+.play()
 
-<!-- Links -->
+Links
 
-<!-- Deployment -->
+Game link
+
 https://ahmedsauce7.github.io/Ftball-Goat/
 
-<!-- Git -->
+Git
+
 https://github.com/ahmedsauce7/Football-Goat.git
 
 <!-- Slides -->
