@@ -1,6 +1,9 @@
 body {
     padding: 0;
     text-align: center;
+    background-image: url("../images/back.png");
+    background-size: cover;
+    background-position: center;
     }
   
 .game-intro {
@@ -79,7 +82,7 @@ div.game-intro p {
     .goatImg {
         height: 103vh;
         width: 83vh;
-       position: absolute;
+        position: absolute;
         top: 20;
         left: 20;
     }
