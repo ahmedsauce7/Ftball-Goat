@@ -153,17 +153,17 @@ cancelAnimationFrame(animateId)
         
 // Gameover text 
         ctx.drawImage(panelImg,canvas.width / 2 - 180, 100, 400, 400 )
-        ctx.font = '55px Arial'
-        ctx.fillStyle = 'black'
-        ctx.fillText('GAME OVER', canvas.width / 2 - 150, canvas.height / 2)
+        ctx.font = '55px impact'
+        ctx.fillStyle = 'red'
+        ctx.fillText('GAME OVER', canvas.width / 2 - 100, canvas.height / 2)
 // Your total score
         ctx.fillStyle = 'black'
-        ctx.font = '30px sans'
+        ctx.font = '30px Gill sans'
         ctx.fillText(`Your Total Score: ${score}`, canvas.width / 2 - 100, canvas.height / 2 + 50)
         restartBtn.style.display = 'block';
 // Goat of Football
         ctx.fillStyle = 'black'
-        ctx.font = '20px Arial'
+        ctx.font = '20px Bradley Hand'
         ctx.fillText('Click on the G.O.A.T. of Football', canvas.width / 2 - 118, canvas.height / 2 - 120)
     }
     else 
