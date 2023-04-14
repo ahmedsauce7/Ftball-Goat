@@ -14,39 +14,40 @@ Use the "Arrows", "A", or "D" to control the player.
 <hr>
 
 ## MVP
-The game has a ball that falls using gravity.
-A player moving right and left.
-Slightly increasing ball speed.
-Score increases everytime the ball is kept of the floor.
+-The game has a ball that falls using gravity.
+-A player moving right and left.
+-Slightly increasing ball speed.
+-Score increases everytime the ball is kept of the floor.
 <br>
 <hr>
 
 ## Backlog
-Scoreboard.
-Ability to restart the game.
-Ability to mute the audio.
+-Scoreboard.
+-Ability to restart the game.
+-Ability to mute the audio.
+-Ability to pop up a picture of the GOAT.
 <br>
 <hr>
 
 
 ## Data Structure
-startGame()
-new Image ()
-beginPath()
-closePath()
-ctx.arc()
-ctx.fill
-ctx.drawImage()
-ctx.fillText()
-animate()
-.play()
+-startGame()
+-new Image ()
+-beginPath()
+-closePath()
+-ctx.arc()
+-ctx.fill
+-ctx.drawImage()
+-ctx.fillText()
+-animate()
+-.play()
 <br>
 <hr>
 
 ## States and States Transitions
-Start page
-Game page
-Replay page
+-Start page
+-Game page
+-Replay page
 <br>
 <hr>
 
